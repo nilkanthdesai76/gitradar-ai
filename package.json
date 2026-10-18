@@ -1,0 +1,36 @@
+{
+  "name": "gitradar-ai",
+  "version": "1.0.0",
+  "description": "Autonomous developer agent and MCP suite powered by local LLMs (Qwen 2.5 Coder)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "gitradar-ai": "bin/gitradar-ai.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --experimental-strip-types src/cli/index.ts",
+    "test": "node --experimental-strip-types --test tests/**/*.test.ts",
+    "fix": "node --experimental-strip-types src/cli/index.ts fix",
+    "commit": "node --experimental-strip-types src/cli/index.ts commit",
+    "audit": "node --experimental-strip-types src/cli/index.ts audit",
+    "mcp": "node --experimental-strip-types src/cli/index.ts mcp"
+  },
+  "keywords": [
+    "git",
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "agent",
+    "qwen",
+    "local-first",
+    "autonomous-coding"
+  ],
+  "author": "Nilkanth Desai",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
