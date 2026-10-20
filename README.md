@@ -40,8 +40,8 @@ gitradar-ai mcp
 ---
 
 ## 📚 Documentation Pillars
-- [PRD.md](PRD.md) — Product specifications and acceptance criteria
-- [ARCHITECTURE.md](ARCHITECTURE.md) — System taxonomy, diagrams, and sequence flows
+- [PRD.md](docs/PRD.md) — Product specifications and acceptance criteria
+- [ARCHITECTURE.md](docs/ARCHITECTURE.md) — System taxonomy, diagrams, and sequence flows
 - [AGENTS.md](AGENTS.md) — Invariants and commands for AI coding assistants
-- [TESTING.md](TESTING.md) — Test suites, mock strategies, and coverage
-- [SECURITY.md](SECURITY.md) — Zero-cloud privacy and execution isolation
+- [TESTING.md](docs/TESTING.md) — Test suites, mock strategies, and coverage
+- [SECURITY.md](docs/SECURITY.md) — Zero-cloud privacy and execution isolation
