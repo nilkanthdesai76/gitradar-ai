@@ -2,10 +2,20 @@ import { GitOps } from '../git/gitOps.ts';
 import { LocalModelClient } from '../llm/localModelClient.ts';
 import { RepairLoop } from '../engine/repairLoop.ts';
 import { GitRadarMcpServer } from '../mcp/gitRadarMcpServer.ts';
+import { GitRadarServer } from '../server/gitRadarServer.ts';
 
 async function main() {
   const args = process.argv.slice(2);
-  const command = args[0] || 'demo';
+  const command = args[0] || 'serve';
+
+  if (command === 'serve') {
+    const port = Number(args[1]) || 5051;
+    const server = new GitRadarServer(port);
+    await server.start();
+    console.log(`\u001B[1;32m✨ GitRadar AI Dashboard running at: http://127.0.0.1:${port}\u001B[0m`);
+    console.log(`Press Ctrl+C to terminate server.\n`);
+    return;
+  }
 
   if (command === 'mcp') {
     GitRadarMcpServer.runStdio();
